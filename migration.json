@@ -1,0 +1,50 @@
+{
+	"table": {
+		"users": [
+			"id int(11) not null",
+			"name varchar(50) not null",
+			"email varchar(50) not null",
+			"password varchar(50) not null",
+			"is_active int(1) not null",
+			"created_at TIMESTAMP not null"
+		],
+		"cashflows": [
+			"id int(11) not null",
+			"user_id int(11) not null",
+			"label_id int(11) null",
+			"type varchar(25) not null",
+			"date date not null",
+			"amount varchar(25) not null",
+			"description varchar(255) not null",
+			"created_at TIMESTAMP not null"
+		],
+		"labels" : [
+			"id int(11) not null",
+			"user_id int(11) not null",
+			"name varchar(255) not null",
+			"limit int(25) not null",
+			"created_at TIMESTAMP not null"
+		],
+		"wishlists": [
+			"id int(11) not null",
+			"user_id int(11) not null",
+			"name varchar(255) not null",
+			"price int(25) not null",
+			"created_at TIMESTAMP not null"
+		]
+	},
+	"attribute": {
+		"PRIMARY": [
+			"users.id",
+			"cashflows.id",
+			"labels.id",
+			"wishlists.id"
+		],
+		"FOREIGN": [
+			"cashflows.user_id=>users.id",
+			"cashflows.label_id=>labels.id",
+			"labels.user_id=>users.id",
+			"wishlists.user_id=>users.id"
+		]
+	}
+}

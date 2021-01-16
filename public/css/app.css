@@ -1,0 +1,90 @@
+nav {
+    position: fixed;
+    top: 0px;left: 0px;bottom: 0px;
+    width: 5%;
+    background-color: #3498db;
+    color: #fff;
+    text-align: center;
+}
+nav a {
+    color: #fff;
+}
+nav li {
+    list-style: none;
+    font-size: 18px;
+    line-height: 65px;
+}
+nav li.active {
+    background-color: #fff;
+    color: #3498db;
+}
+
+.container {
+    position: absolute;
+    top: 0px;left: 5%;right: 0px;bottom: 0px;
+    background-color: #fff;
+}
+.container .jumbo h2 {
+    font-size: 55px;
+}
+
+button.actionBtn {
+    width: 70px;
+    height: 70px;
+    position: fixed;
+    bottom: 7%;right: 3%;
+    border-radius: 900px;
+    z-index: 3;
+    border: none;
+}
+.overlay {
+    position: fixed;
+    top: 0px;left: 0px;right: 0px;bottom: 0px;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 2;
+    display: none;
+}
+@media (max-width: 480px) {
+    nav {
+        top: auto;
+        right: 0px;
+        width: 100%;
+        z-index: 2;
+    }
+    nav li {
+        float: left;
+        width: 20%;
+        line-height: 55px;
+    }
+    .container {
+        left: 0px;
+        margin-bottom: 50px;
+        padding: 0px !important;
+    }
+    button.actionBtn {
+        right: 0px;bottom: 20%;
+        border-radius: 0px;
+        border-top-left-radius: 100px;
+        border-bottom-left-radius: 100px;
+    }
+}
+#addArea {
+    position: fixed;
+    bottom: 20%;right: 3%;
+    right: -100%;
+    z-index: 3;
+    text-align: right;
+}
+#addArea .item {
+    cursor: pointer;
+    background-color: #fff;
+    margin-bottom: 15px;
+    border-radius: 600px;
+    padding: 12px 35px;
+    display: inline-block;
+    box-sizing: border-box;
+    transition: 0.7s;
+}
+.popup h2 {
+    font-size: 35px;
+}
